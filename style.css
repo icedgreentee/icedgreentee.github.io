@@ -74,7 +74,11 @@ section {
 }
 
 #projects {
-  padding: 0rem 1.5rem 0rem 2rem;
+  padding: 0rem 1.5rem 2rem 2rem;
+  ul { 
+    margin: 0.8rem 0 0rem 1.5rem;
+    padding: 0;
+  }
 }
 
 h1, h2 {
