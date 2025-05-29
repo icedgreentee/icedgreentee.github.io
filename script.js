@@ -1,5 +1,3 @@
-// script.js
-
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');
 const prevBtn = document.getElementById('prevBtn');
@@ -8,8 +6,10 @@ const nextBtn = document.getElementById('nextBtn');
 let index = 0;
 
 function updateCarousel() {
-  // Move carousel container horizontally by index * item width
-  const itemWidth = items[0].offsetWidth;
+  // Calculate width of one item + marginRight
+  const itemStyle = getComputedStyle(items[0]);
+  const itemWidth = items[0].offsetWidth + parseInt(itemStyle.marginRight);
+  
   carousel.style.transform = `translateX(-${index * itemWidth}px)`;
 }
 
@@ -23,5 +23,5 @@ nextBtn.addEventListener('click', () => {
   updateCarousel();
 });
 
-// Initialize carousel position on page load
+// Initialize carousel position
 updateCarousel();
