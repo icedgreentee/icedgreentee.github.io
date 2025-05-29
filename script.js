@@ -6,31 +6,19 @@ const nextBtn = document.getElementById('nextBtn');
 let index = 0;
 
 function updateCarousel() {
-  // Calculate width of one item + marginRight dynamically
-  const itemStyle = getComputedStyle(items[0]);
-  const itemWidth = items[0].offsetWidth + parseInt(itemStyle.marginRight);
-
-  // Translate carousel container
-  carousel.style.transform = `translateX(-${index * itemWidth}px)`;
+  // Show 1 item at a time by shifting X
+  carousel.style.transform = `translateX(-${index * 100}%)`;
 }
 
 prevBtn.addEventListener('click', () => {
-  if (index > 0) {
-    index--;
-  } else {
-    index = items.length - 1;
-  }
+  index = (index - 1 + items.length) % items.length;
   updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
-  if (index < items.length - 1) {
-    index++;
-  } else {
-    index = 0;
-  }
+  index = (index + 1) % items.length;
   updateCarousel();
 });
 
-// Initialize on load
+// Initialize
 updateCarousel();
