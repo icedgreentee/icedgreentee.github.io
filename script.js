@@ -1,5 +1,3 @@
-// script.js
-
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');
 const prevBtn = document.getElementById('prevBtn');
