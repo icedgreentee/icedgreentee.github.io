@@ -1,13 +1,14 @@
 :root {
-  --cherry: #d2042d;
-  --cherry-dark: #491b1d;
+  --cherry: #7A2641;
+  --cherry-dark: #4d061c;
   --berry: #a83257;
   --seal-brown: #310A0b;
   --brown-dark: #2e2320;
-  --cream: #E0A387;
+  --cream: #FFFAF0;
   --gray: #a7a7a7;
   --white: #fff;
-  --light-berry: #b96a59;
+  --light-berry: #A1736B;
+  --lighter-berry: #B8938C;
   
 }
 
@@ -50,7 +51,7 @@ nav a:focus {
 }
 
 section {
-  padding: 2.5rem 2rem 1.5rem 2rem;
+  padding: 0rem 1.5rem 1rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -58,7 +59,8 @@ section {
 #hero {
   text-align: center;
   margin-top: 2.5rem;
-  background: var(--light-cherry)
+  max-width: -webkit-fill-available;
+  background: var(--light-berry);
 }
 
 #hero img {
@@ -69,6 +71,10 @@ section {
   border: 3px solid var(--cherry);
   box-shadow: 0 4px 16px rgba(162, 50, 87, 0.10);
   margin-bottom: 1rem;
+}
+
+#projects {
+  padding: 0rem 1.5rem 0rem 2rem;
 }
 
 h1, h2 {
@@ -84,15 +90,18 @@ h1 {
 h2 {
   font-size: 1.5rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
   border-bottom: 2px solid var(--berry);
   display: inline-block;
-  padding-bottom: 0.2rem;
+  background: var(--lighter-berry);
 }
 
 ul {
-  margin: 0.8rem 0 1.5rem 1.2rem;
+  margin: 0.8rem 0 1.5rem 1.5rem;
   padding: 0;
+}
+
+li {
+  padding-bottom: 0.4rem;
 }
 
 a {
@@ -110,7 +119,7 @@ a:focus {
 .carousel-container {
   position: relative;
   max-width: 900px;
-  margin: 3rem auto 2rem auto;
+  margin: 0rem auto 0.5rem auto;
   background: var(--white);
   border-radius: 1.3rem;
   box-shadow: 0 8px 32px rgba(162, 50, 87, 0.07), 0 2px 8px rgba(75, 58, 47, 0.07);
@@ -138,8 +147,8 @@ a:focus {
 
 .carousel-item img {
   width: 90%;
-  max-width: 320px;
-  height: 170px;
+  max-width: 520px;
+  height: 320px;
   object-fit: cover;
   border-radius: 0.8rem;
   border: 2px solid var(--cherry);
@@ -199,7 +208,8 @@ footer {
   color: var(--seal-brown);
   font-size: 1rem;
   letter-spacing: 0.02em;
-  background: var(--light-cherry);
+  max-width: -webkit-fill-available;
+  background: var(--light-berry);
 }
 
 /* Responsive adjustments */
