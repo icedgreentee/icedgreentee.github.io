@@ -73,6 +73,12 @@ section {
   margin-bottom: 1rem;
 }
 
+#experience {
+  ul { 
+    margin: 0.8rem 0 0rem 1.5rem;
+  }
+}
+
 #projects {
   padding: 0rem 1.5rem 2rem 2rem;
   ul { 
