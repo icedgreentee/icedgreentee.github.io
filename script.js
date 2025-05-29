@@ -6,22 +6,31 @@ const nextBtn = document.getElementById('nextBtn');
 let index = 0;
 
 function updateCarousel() {
-  // Calculate width of one item + marginRight
+  // Calculate width of one item + marginRight dynamically
   const itemStyle = getComputedStyle(items[0]);
   const itemWidth = items[0].offsetWidth + parseInt(itemStyle.marginRight);
-  
+
+  // Translate carousel container
   carousel.style.transform = `translateX(-${index * itemWidth}px)`;
 }
 
 prevBtn.addEventListener('click', () => {
-  index = (index - 1 + items.length) % items.length;
+  if (index > 0) {
+    index--;
+  } else {
+    index = items.length - 1;
+  }
   updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
-  index = (index + 1) % items.length;
+  if (index < items.length - 1) {
+    index++;
+  } else {
+    index = 0;
+  }
   updateCarousel();
 });
 
-// Initialize carousel position
+// Initialize on load
 updateCarousel();
