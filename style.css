@@ -128,4 +128,42 @@ footer {
   #hero h1 {
     font-size: 2.2rem;
   }
+  .carousel-container {
+  position: relative;
+  width: 340px; /* width of iframe + some padding */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  text-align: center;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #800020;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
 }
