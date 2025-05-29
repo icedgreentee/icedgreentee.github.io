@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
@@ -16,22 +17,22 @@
     </ul>
   </nav>
 
-  <section id="hero" style="text-align: center; background-color: #4b2e2e; padding: 30px 0; color: #f0e6d2;">
-    <img src="images/profile.jpg" alt="Tanvi Mishra" style="width:150px; height:150px; border-radius: 50%; border: 5px solid #7a4f4f; object-fit: cover; margin-bottom: 15px;" />
-    <h1 style="margin: 0; font-size: 3rem; font-weight: bold;">Tanvi Mishra</h1>
-    <p style="font-size: 1.25rem; margin-top: 5px;">Bachelor of Science / Master of Engineering (Software) Student, University of Melbourne</p>
+  <section id="hero">
+    <img src="images/profile.jpg" alt="Tanvi Mishra" />
+    <h1>Tanvi Mishra</h1>
+    <p>Bachelor of Science / Master of Engineering (Software) Student, University of Melbourne</p>
   </section>
 
-  <section id="about" class="content-section">
+  <section id="about">
     <h2>About Me</h2>
     <p>Academically driven student passionate about combining technology, finance, and creativity. Currently pursuing a Bachelor of Science / Master of Engineering (Software) graduate package at the University of Melbourne.</p>
   </section>
 
-  <section id="experience" class="content-section">
+  <section id="experience">
     <h2>Experience</h2>
     <ul>
       <li><strong>Women in Tech (WIT) Unimelb — Events Officer</strong><br />March 2025 – Present<br />Organising events to promote women in technology at the University of Melbourne.</li>
-      <li><strong>The Mac.Robertson Girls' High School</strong>
+      <li><strong>The Mac.Robertson Girls' High School</strong><br />
         <ul>
           <li><strong>Environment Committee Member</strong> — Feb 2024 to Nov 2024</li>
           <li><strong>K-Dance Club Co-captain</strong> — Jan 2023 to Nov 2024<br />Established and led club meetings and events.</li>
@@ -45,15 +46,14 @@
       <li><strong>Self-employed — Volunteer Tutor</strong><br />Apr 2022 to Jun 2022<br />Tutored primary students in reading and maths with personalised lesson plans.</li>
     </ul>
   </section>
-  
+
   <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li><a href="https://www.amazon.com.au/Amorphous-Musings-Tanvi-Mishra-ebook/dp/B0DXT4YJKX" target="_blank" rel="noopener noreferrer">Amorphous Musings</a> – Poetry collection</li>
-      <li>
-        Content Creation Journey:
+      <li>Content Creation Journey:
         <ul>
-          <li>Youtube channel — <em>Focused on vlogging my daily life</em></li>
+          <li>YouTube channel — <em>Focused on vlogging my daily life</em></li>
           <li>Instagram — <em>Focused on photography</em></li>
           <li>TikTok — <em>Short glimpses into my life</em></li>
         </ul>
@@ -61,31 +61,27 @@
       <li><a href="#">Personal Website</a></li>
     </ul>
   </section>
-  
+
+  <section id="carousel-section">
+    <h2>Media Carousel</h2>
     <div class="carousel-container">
-      <button id="prevBtn" aria-label="Previous">&#10094;</button>
+      <button id="prevBtn" aria-label="Previous">&#9664;</button>
       <div class="carousel">
-        <div class="carousel-item">
-          <a href="https://www.youtube.com/watch?v=STwWJuCnfs4" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/STwWJuCnfs4/hqdefault.jpg" alt="YouTube Vlog Thumbnail" />
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://www.instagram.com/p/DJ_fB6IvjCY/" target="_blank" rel="noopener noreferrer">
-            <img src="images/insta.jpg" alt="Instagram Photo Thumbnail" />
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="https://www.tiktok.com/@xoxoteetime/video/7506490250454158610" target="_blank" rel="noopener noreferrer">
-            <img src="images/tiktok.heic" alt="TikTok Video Thumbnail" />
-          </a>
-        </div>
+        <a href="https://www.youtube.com/watch?v=STwWJuCnfs4&list=PLNGW2IKDX3gbTNV4k8si8CfFr5yQyofmT&ab_channel=Tee" target="_blank" class="carousel-item" title="YouTube Vlog">
+          <img src="images/youtube.jpg" alt="YouTube Vlog Thumbnail" />
+        </a>
+        <a href="https://www.instagram.com/p/DJ_fB6IvjCY/" target="_blank" class="carousel-item" title="Instagram Photo">
+          <img src="images/insta.jpg" alt="Instagram Photo Thumbnail" />
+        </a>
+        <a href="https://www.tiktok.com/@xoxoteetime/video/7506490250454158610" target="_blank" class="carousel-item" title="TikTok Video">
+          <img src="images/tiktok.heic" alt="TikTok Video Thumbnail" />
+        </a>
       </div>
-      <button id="nextBtn" aria-label="Next">&#10095;</button>
+      <button id="nextBtn" aria-label="Next">&#9654;</button>
     </div>
   </section>
 
-  <section id="contact" class="content-section">
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:tanvimishra906@gmail.com">tanvimishra906@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/tanvi-mishra-b03411262" target="_blank">linkedin.com/in/tanvi-mishra-b03411262</a></p>
