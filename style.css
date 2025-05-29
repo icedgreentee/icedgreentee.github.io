@@ -1,137 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tanvi Mishra</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff4e6; /* creamy light beige */
+  color: #4b2e2e; /* deep oak brown */
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-  <header id="hero">
-    <img
-      src="profile.jpg"
-      alt="Tanvi Mishra"
-      id="profile-pic"
-    />
-    <h1>Tanvi Mishra</h1>
-    <p>Bachelor of Science / Master of Engineering (Software) Student, University of Melbourne</p>
-  </header>
+/* Navigation */
+nav {
+  background-color: #7b2d26; /* dark cherry red */
+  padding: 1rem 2rem; /* side padding */
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Academically driven student passionate about combining technology, finance, and creativity. Currently pursuing a Bachelor of Science / Master of Engineering (Software) graduate package at the University of Melbourne.</p>
-    </section>
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+  padding: 0 1rem;
+}
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Women in Tech (WIT) Unimelb — Events Officer</strong><br />
-          March 2025 – Present<br />
-          Organising events to promote women in technology at the University of Melbourne.
-        </li>
-        <li>
-          <strong>The Mac.Robertson Girls' High School</strong>
-          <ul>
-            <li><strong>Environment Committee Member</strong> — Feb 2024 to Nov 2024</li>
-            <li><strong>K-Dance Club Co-captain</strong> — Jan 2023 to Nov 2024<br />Established and led club meetings and events.</li>
-            <li><strong>House Music Auditioned Chorale Co-Director</strong> — Feb 2024 to Mar 2024<br />Led auditions and rehearsals with a team of 18 students.</li>
-            <li><strong>House Drama Director</strong> — Apr 2023 to Jun 2023<br />Co-wrote scripts and led 50 students through rehearsals.</li>
-            <li><strong>High Ability Outreach Mentor</strong> — Jul 2022 to Jan 2023<br />Designed educational activities for high-achieving primary students.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>The Active Youth — Blog Writer & Ambassador</strong><br />
-          Mar 2023 to Mar 2024<br />
-          Wrote articles on environmental conservation and collaborated on social media content.
-        </li>
-        <li>
-          <strong>SIA Medical Group — Medical Work Experience</strong><br />
-          Jun 2022<br />
-          Gained administrative and patient communication skills during placement.
-        </li>
-        <li>
-          <strong>Self-employed — Volunteer Tutor</strong><br />
-          Apr 2022 to Jun 2022<br />
-          Tutored primary students in reading and maths with personalised lesson plans.
-        </li>
-      </ul>
-    </section>
+nav ul li a {
+  color: #f9ede3; /* creamy off-white */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="https://www.amazon.com.au/Amorphous-Musings-Tanvi-Mishra-ebook/dp/B0DXT4YJKX" target="_blank">Amorphous Musings</a> – Poetry collection</li>
-        <li>
-          Content Creation Journey:
-          <ul>
-            <li>
-              YouTube Channel<br />
-              <span>Focused on vlogging my daily life</span>
-            </li>
-            <li>
-              Instagram<br />
-              <span>Focused on photography</span>
-            </li>
-            <li>
-              TikTok<br />
-              <span>Short glimpses into my life</span>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Personal Website</a></li>
-      </ul>
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #f7b267; /* soft orange/peach highlight */
+}
 
-      <!-- Carousel -->
-      <div id="carousel-wrapper">
-        <button class="arrow-btn" id="prevBtn" aria-label="Previous">‹</button>
+/* Header */
+#hero {
+  background-color: #7b2d26; /* cherry red */
+  color: #f9ede3; /* creamy off-white */
+  text-align: center;
+  padding: 4rem 2rem;
+  border-bottom: 6px solid #d2691e; /* chocolate brown */
+}
 
-        <div class="carousel-container" aria-label="Video and photo carousel">
-          <div class="carousel">
-            <a href="https://www.youtube.com/watch?v=STwWJuCnfs4&list=PLNGW2IKDX3gbTNV4k8si8CfFr5yQyofmT&ab_channel=Tee" target="_blank" class="carousel-item" tabindex="0">
-              <img src="https://img.youtube.com/vi/STwWJuCnfs4/hqdefault.jpg" alt="YouTube Video Thumbnail" />
-              <p>YouTube</p>
-              <span>Vlogging daily life</span>
-            </a>
+#profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #d2691e; /* oak brown */
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: inline-block;
+  background-color: #6b1f1a; /* darker cherry background behind pic */
+}
 
-            <a href="https://www.instagram.com/p/DJ_fB6IvjCY/" target="_blank" class="carousel-item" tabindex="0">
-              <img src="images/insta.jpg" alt="Instagram Photo" />
-              <p>Instagram</p>
-              <span>Photography focus</span>
-            </a>
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-family: 'Georgia', serif;
+}
 
-            <a href="https://www.tiktok.com/@xoxoteetime/video/7506490250454158610" target="_blank" class="carousel-item" tabindex="0">
-              <img src="images/tiktok.heic" alt="TikTok Video Thumbnail" />
-              <p>TikTok</p>
-              <span>Short glimpses</span>
-            </a>
-          </div>
-        </div>
+#hero p {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #f7b267; /* peach */
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-        <button class="arrow-btn" id="nextBtn" aria-label="Next">›</button>
-      </div>
-    </section>
+/* Main container */
+main {
+  max-width: 900px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem; /* side padding */
+}
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:tanvimishra906@gmail.com">tanvimishra906@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/tanvi-mishra-b03411262" target="_blank">linkedin.com/in/tanvi-mishra-b03411262</a></p>
-      <p>GitHub: <a href="https://github.com/icedgreentee" target="_blank">github.com/icedgreentee</a></p>
-      <p>Resume: <a href="your-resume.pdf" target="_blank">Download PDF</a></p>
-    </section>
-  </main>
+/* Section headings */
+section h2 {
+  color: #7b2d26; /* cherry red */
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d2691e; /* oak brown */
+  padding-bottom: 0.5rem;
+}
 
-</body>
-<script src="script.js"></script>
-</html>
+/* Sections */
+section {
+  margin-bottom: 3rem;
+  padding: 0 1rem; /* inner padding */
+}
+
+/* Lists */
+ul {
+  list-style: disc inside;
+  color: #4b2e2e; /* oak brown */
+  line-height: 1.5;
+}
+
+ul ul {
+  list-style: circle inside;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Links */
+a {
+  color: #7b2d26; /* cherry red */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #d2691e; /* oak brown */
+}
+
+/* Carousel container */
+.carousel-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 2rem; /* side padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Arrow buttons */
+.arrow-button {
+  background-color: #7b2d26; /* cherry red */
+  border: none;
+  color: #f9ede3;
+  font-size: 2.2rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover,
+.arrow-button:focus {
+  background-color: #d2691e; /* oak brown */
+  outline: none;
+}
+
+/* Carousel thumbnails */
+.carousel {
+  flex-grow: 1;
+  display: flex;
+  gap: 1.2rem;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 140px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  filter: brightness(0.9);
+  border: 2px solid transparent;
+}
+
+.carousel-item.active {
+  width: 180px;
+  height: 100px;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  filter: brightness(1);
+  border: 3px solid #f7b267; /* highlight peach */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  background-color: #d2691e; /* oak brown */
+  color: #f9ede3;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+}
