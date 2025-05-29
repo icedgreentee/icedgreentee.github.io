@@ -147,8 +147,8 @@ a:focus {
 
 .carousel-item img {
   width: 90%;
-  max-width: 520px;
-  height: 320px;
+  max-width: 620px;
+  height: 400px;
   object-fit: cover;
   border-radius: 0.8rem;
   border: 2px solid var(--cherry);
