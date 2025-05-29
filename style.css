@@ -1,208 +1,215 @@
 :root {
-  --dark-cherry: #8B0000;
-  --rich-brown: #5D4037;
-  --warm-brown: #795548;
-  --creamy: #FFF8F0;
-  --gold-accent: #D4AF37;
+  --cherry: #d2042d;
+  --cherry-dark: #a0112b;
+  --berry: #a83257;
+  --brown: #4b3a2f;
+  --brown-dark: #2e2320;
+  --cream: #f4f3ef;
+  --gray: #a7a7a7;
+  --white: #fff;
 }
 
-* {
+/* General Styles */
+body {
+  background: var(--cream);
+  color: var(--brown-dark);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Georgia', serif;
-  background-color: var(--creamy);
-  color: #333;
-  line-height: 1.6;
+  min-height: 100vh;
 }
 
 nav {
-  background-color: var(--rich-brown);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: var(--brown);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(44, 17, 27, 0.08);
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
-  color: var(--creamy);
+  color: var(--cream);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
-  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
 }
 
-nav a:hover {
-  color: var(--gold-accent);
+nav a:hover,
+nav a:focus {
+  color: var(--cherry);
 }
 
 section {
-  padding: 3rem 1rem;
-  max-width: 1200px;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-h1, h2, h3 {
-  color: var(--dark-cherry);
-}
-
 #hero {
-  background: linear-gradient(135deg, var(--dark-cherry), var(--rich-brown));
-  color: var(--creamy);
   text-align: center;
-  padding: 4rem 1rem;
+  margin-top: 2.5rem;
 }
 
 #hero img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 5px solid var(--gold-accent);
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  margin-bottom: 1.5rem;
-}
-
-#hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-#hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--gold-accent);
-}
-
-ul {
-  margin-left: 2rem;
+  border-radius: 50%;
+  border: 3px solid var(--cherry);
+  box-shadow: 0 4px 16px rgba(162, 50, 87, 0.10);
   margin-bottom: 1rem;
 }
 
-li {
-  margin-bottom: 0.5rem;
+h1, h2 {
+  color: var(--cherry-dark);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--berry);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+ul {
+  margin: 0.8rem 0 1.5rem 1.2rem;
+  padding: 0;
 }
 
 a {
-  color: var(--dark-cherry);
-  transition: color 0.3s;
+  color: var(--cherry);
+  transition: color 0.2s;
 }
 
-a:hover {
-  color: var(--warm-brown);
+a:hover,
+a:focus {
+  color: var(--berry);
+  text-decoration: underline;
 }
 
 /* Carousel Styles */
 .carousel-container {
-  max-width: 900px;
-  margin: 2rem auto;
   position: relative;
-  padding: 1rem;
+  max-width: 900px;
+  margin: 3rem auto 2rem auto;
+  background: var(--white);
+  border-radius: 1.3rem;
+  box-shadow: 0 8px 32px rgba(162, 50, 87, 0.07), 0 2px 8px rgba(75, 58, 47, 0.07);
+  border: 2.5px solid var(--cherry);
+  padding: 2.2rem 2.5rem 1.7rem 2.5rem;
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  padding: 1rem 0;
-  margin: 0 2rem;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  will-change: transform;
 }
 
 .carousel-item {
-  scroll-snap-align: start;
-  flex: 0 0 300px;
-  background: var(--warm-brown);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.carousel-item:hover {
-  transform: translateY(-5px);
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.2s;
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 180px;
+  width: 90%;
+  max-width: 320px;
+  height: 170px;
   object-fit: cover;
-  border-bottom: 3px solid var(--dark-cherry);
+  border-radius: 0.8rem;
+  border: 2px solid var(--cherry);
+  box-shadow: 0 4px 16px rgba(162, 50, 87, 0.09);
+  background: var(--gray);
+  margin-bottom: 1rem;
 }
 
 .carousel-item p {
-  padding: 1rem;
-  color: var(--creamy);
-  text-align: center;
+  color: var(--cherry-dark);
   font-weight: 500;
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+  margin: 0;
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--dark-cherry);
-  color: var(--creamy);
+  background: var(--brown-dark);
+  color: var(--cream);
   border: none;
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
-  font-size: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.7rem;
   cursor: pointer;
   z-index: 10;
-  opacity: 0.8;
-  transition: all 0.3s;
+  opacity: 0.85;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+  box-shadow: 0 2px 6px rgba(44, 17, 27, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.carousel-btn:focus,
 .carousel-btn:hover {
+  background: var(--cherry);
+  color: var(--cream);
   opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  outline: none;
 }
 
 #prevBtn {
-  left: 0;
+  left: 0.6rem;
 }
-
 #nextBtn {
-  right: 0;
+  right: 0.6rem;
 }
 
+/* Footer */
 footer {
-  background-color: var(--rich-brown);
-  color: var(--creamy);
   text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
+  padding: 1.2rem 2rem 1.7rem 2rem;
+  color: var(--brown);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  background: transparent;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    gap: 1rem;
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  section,
+  .carousel-container,
+  nav,
+  footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
-  
-  .carousel {
-    margin: 0 0.5rem;
-  }
-  
-  .carousel-item {
-    flex: 0 0 250px;
+  .carousel-item img {
+    max-width: 96vw;
+    height: 120px;
   }
 }
