@@ -1,42 +1,41 @@
+/* style.css */
+
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5f2;
+  color: #2c1b13;
 }
 
 nav {
-  background-color: #4a2c2a;
+  background-color: #5d0e1f; /* dark cherry red */
   padding: 1rem;
-  text-align: center;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   padding: 0;
+  margin: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav a {
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 #hero {
-  background-color: #a9746e;
+  background-color: #7c4a2d; /* oak brown */
   color: white;
-  padding: 2rem;
   text-align: center;
-  width: 100vw;
+  padding: 3rem 1rem;
+  width: 100%;
 }
 
-#hero img {
+.profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -45,45 +44,54 @@ nav a {
 }
 
 section {
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #5d0e1f;
 }
 
 .carousel-container {
   position: relative;
   width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
   overflow: hidden;
-  margin-top: 2rem;
 }
 
 .carousel {
   display: flex;
-  gap: 1rem;
-  transition: transform 0.5s ease;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  transition: transform 0.3s ease-in-out;
 }
 
-.carousel a {
-  flex: 0 0 auto;
-  width: 300px;
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.carousel img {
-  width: 100%;
+.carousel-item img {
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-#prevBtn, #nextBtn {
+.carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #4a2c2a;
+  background-color: rgba(93, 14, 31, 0.8);
   color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
   z-index: 2;
 }
 
@@ -93,4 +101,12 @@ section {
 
 #nextBtn {
   right: 10px;
+}
+
+footer {
+  background-color: #5d0e1f;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
