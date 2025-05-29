@@ -1,12 +1,14 @@
 :root {
   --cherry: #d2042d;
-  --cherry-dark: #a0112b;
+  --cherry-dark: #491b1d;
   --berry: #a83257;
-  --brown: #4b3a2f;
+  --seal-brown: #310A0b;
   --brown-dark: #2e2320;
-  --cream: #f4f3ef;
+  --cream: #E0A387;
   --gray: #a7a7a7;
   --white: #fff;
+  --light-berry: #b96a59;
+  
 }
 
 /* General Styles */
@@ -20,7 +22,7 @@ body {
 }
 
 nav {
-  background: var(--brown);
+  background: var(--seal-brown);
   padding: 0.5rem 2rem;
   box-shadow: 0 2px 8px rgba(44, 17, 27, 0.08);
 }
@@ -56,11 +58,12 @@ section {
 #hero {
   text-align: center;
   margin-top: 2.5rem;
+  background: var(--light-cherry)
 }
 
 #hero img {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--cherry);
@@ -193,10 +196,10 @@ a:focus {
 footer {
   text-align: center;
   padding: 1.2rem 2rem 1.7rem 2rem;
-  color: var(--brown);
+  color: var(--seal-brown);
   font-size: 1rem;
   letter-spacing: 0.02em;
-  background: transparent;
+  background: var(--light-cherry);
 }
 
 /* Responsive adjustments */
@@ -208,6 +211,7 @@ footer {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+  
   .carousel-item img {
     max-width: 96vw;
     height: 120px;
